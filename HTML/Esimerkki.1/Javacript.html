@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>JAVASCRIPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyyli.css">
+  </head>
+  <body>
+    <div class="bg4">
+      <ul class="topnav">
+        <li><a href="Kotisivu.html">HOME</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+        <li><a class="active" href="Javacript.html">JAVASCRIPT</a></li>
+        <li class="right"><a href="About.html">ABOUT</a></li>
+      </ul>
+
+      <br>
+      <br>
+      <h1 style="color: white; text-align: center;">Tälle sivulle kerään erilaisia Javascript-luomuksia.</h1>
+
+      <button type="button"
+        onClick="document.getElementById('aika').innerHTML = Date()" style="margin: 0 auto; display: block;">
+        Onko aijan käsitys hukassa? Paina minua. :)
+      </button>
+      <h3 id="aika" style="color:white; text-align: center;"></h3>
+
+      <h2 id="paiva" style="color:white; text-align: center;"></h2>
+
+      <script>
+        let day;
+        switch (new Date().getDay()) {
+          case 0:
+            day = "Sunnuntai";
+            break;
+          case 1:
+            day = "Maanantai";
+            break;
+          case 2:
+            day = "Tiistai";
+            break;
+          case 3:
+            day = "Keskiviikko";
+            break;
+          case 4:
+            day = "Torstai";
+            break;
+          case 5:
+            day = "Perjantai";
+            break;
+          case  6:
+            day = "Lauantai";
+        }
+            document.getElementById("paiva").innerHTML = "Tänään on " + day +".";
+      </script>
+
+    </div>
+  </body>
+</html>

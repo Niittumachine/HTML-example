@@ -1,0 +1,145 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: gray;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {
+    float:left;
+    border-right: 1px solid white;
+}
+  
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+  
+ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul.topnav li a.active {
+    background-color: black;
+}
+
+ul.topnav li a:last-child {
+    border-right: none;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+.bg1, .bg2, .bg3, .bg4{
+    height: 100%;
+    opacity: 0.85;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg1 {
+    background-image: url("kuvat/valasranta.jpg");
+}
+
+.bg2 {
+    background-image: url("kuvat/taltitausta.jpg");
+}
+
+.bg3 {
+    background-image: url("kuvat/talvikuva.jpg");
+}
+
+.bg4 {
+    background-image: url("kuvat/galleriakuva4.jpg");
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+    .bg {
+        background-size: auto;
+    }
+}
+
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+}
+  
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
